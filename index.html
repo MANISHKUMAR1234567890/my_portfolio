@@ -25,6 +25,29 @@
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
 }
+.pub-card {
+  transition: all 0.28s ease;
+  border-radius: 14px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.pub-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0px 14px 28px rgba(0,0,0,0.12);
+  cursor: pointer;
+  border-color: #c7d2fe;
+}
+
+.pub-card h3 {
+  transition: color 0.25s ease;
+}
+
+.pub-card:hover h3 {
+  color: var(--indigo);
+}
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -180,6 +203,12 @@
     /* small helpers */
     .muted-sm{color:#6b7280;font-size:13px}
     .repo-link{color:#374151;font-weight:700}
+    .award-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 14px 28px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
   </style>
 </head>
 <body>
@@ -190,11 +219,12 @@
       <div style="display:flex;align-items:center;gap:18px">
         <div class="brand">Manish Kumar</div>
         <!-- Resume link: local path (will be transformed to URL by your system) -->
-        <a href="assets\resume.pdf" style="font-weight:700;color:#334155;font-size:13px" target="_blank" rel="noopener">Download Resume</a>
+        
       </div>
 
       <div class="nav-links">
         <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
@@ -213,6 +243,7 @@
     <!-- Mobile menu -->
     <div id="mobile-menu-panel" style="display:none;background:#fff;padding:12px 20px;border-top:1px solid #eef2ff">
       <a href="#about" style="display:block;padding:10px 0;border-bottom:1px solid #f3f4f6">About</a>
+      <a href="#education" style="display:block;padding:10px 0;border-bottom:1px solid #f3f4f6">Education</a>
       <a href="#projects" style="display:block;padding:10px 0;border-bottom:1px solid #f3f4f6">Projects</a>
       <a href="#skills" style="display:block;padding:10px 0;border-bottom:1px solid #f3f4f6">Skills</a>
       <a href="#experience" style="display:block;padding:10px 0;border-bottom:1px solid #f3f4f6">Experience</a>
@@ -244,6 +275,7 @@
             <div class="about-badges">
               <span style="background:#eef2ff;padding:8px 12px;border-radius:999px;color:var(--indigo);font-weight:700">B.Tech CSE(AI&ML)</span>
               <span style="background:#f0fdf4;padding:8px 12px;border-radius:999px;color:var(--green);font-weight:700">Researcher</span>
+              <span style="background:#f0fdf4;padding:8px 12px;border-radius:999px;color:var(--green);font-weight:700">AI Developer</span>
               <span style="background:#fff7ed;padding:8px 12px;border-radius:999px;color:#d97706;font-weight:700">Data Analyst</span>
             </div>
           </div>
@@ -258,392 +290,701 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section-padding">
-      <div class="container">
-        <div class="card" style="max-width:960px;margin:0 auto;">
-          <h2 style="font-size:28px;margin-bottom:8px">About Me</h2>
-          <p class="muted" style="font-size:15px">
-            I am an enthusiastic undergraduate student specializing in Artificial Intelligence and Machine Learning, with strong hands-on experience in deep learning, computer vision, and natural language processing. Also GATE 2025 qualified in Data Science and Artificial Intelligence. I have worked on impactful academic and real-world projects including Biomedical Named Entity Recognition, Extension for Malicious QR and URL Detection with online learning, Lumpy Skin Disease classification using CNN variants, and AI-powered assistive wearable smart cap for visually impaired people.
-
-Skilled in Python development, Machine Learning model deployment, and chatbot development. I enjoy building intelligent, user-centric systems. I actively explore modern deep learning architectures  and have experience deploying applications using Streamlit.
-
-
-
-          <p style="margin-top:12px;color:#374151">
-           Passionate about research and innovation, I have participated in hackathons and ML competitions  and secured positions in competitive events. I am driven by the goal of building AI solutions that solve real-world problems and make technology more accessible.
-          </p>
-
-          <div class="about-badges" style="margin-top:18px">
-            <span style="background:#eef2ff;padding:8px 12px;border-radius:10px;color:var(--indigo);font-weight:700">GATE Qualified</span>
-            <span style="background:#eef2ff;padding:8px 12px;border-radius:10px;color:var(--indigo);font-weight:700">Hackathon Winner</span>
-            <span style="background:#eef2ff;padding:8px 12px;border-radius:10px;color:var(--indigo);font-weight:700">Ethical AI</span>
-            <span style="background:#f0f9ff;padding:8px 12px;border-radius:10px;color:var(--cyan);font-weight:700">Model Optimization</span>
-            <span style="background:#faf5ff;padding:8px 12px;border-radius:10px;color:#7c3aed;font-weight:700">Chatbot Development</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="section-padding" style="background:linear-gradient(180deg,#f9fafb,#ffffff)">
-      <div class="container grid-2" style="max-width:1100px;margin:0 auto">
-        <div class="card">
-          <h3 style="color:var(--indigo);margin-bottom:6px">B.Tech in CSE(AI&ML)</h3>
-          <div style="font-weight:700">Jawaharlal Nehru Govt. Engineering College, Sundernagar, HP</div>
-          <div class="muted" style="margin-top:6px">2022 - 2026</div>
-
-          <p style="margin-top:8px">CGPA: 8.67; Specialization in Deep Learning, Computer Vision,Large Language Models, Data Analysis; GATE 2025 (DA) Qualified and cordinator of GATE Wing in CSE CLUB; Research Experience; State Level Hackathon Winner; Best Technical Project Presentation Award</p>
-        </div>
-        <div class="card">
-          <h3 style="color:var(--cyan);margin-bottom:6px">Higher Secondary Education</h3>
-          <div style="font-weight:700">Govt. Sr. Sec. School, Patta, Hamirpur, HP</div>
-          <div class="muted" style="margin-top:6px">2022</div>
-          <p style="margin-top:8px">Percentage: 93.2%; Stream PCM; Foundation in Mathematics; NSS Volunteer</p>
-        </div>
-         <div class="card">
-          <h3 style="color:var(--cyan);margin-bottom:6px">Metriculation</h3>
-          <div style="font-weight:700">Govt. Sr. Sec. School, Patta, Hamirpur, HP</div>
-          <div class="muted" style="margin-top:6px">2022</div>
-          <p style="margin-top:8px">Percentage: 90.4%; Topper of School; Represented my school at the District Level Quiz Competition</p>
-        </div>
-      </div>
-    </section>
-
-       <!-- PROJECTS -->
-    <section id="projects" class="section-padding">
-      <div class="container">
-        <h2 style="text-align:center;font-size:28px;margin-bottom:18px">Featured Projects</h2>
-
-        <!-- Removed category filters as requested -->
-
-        <div class="projects-grid" id="projects-container" style="max-width:1200px;margin:0 auto">
-
-          <!-- Smart Cap – Major Project -->
-          <div class="project-card">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <h3 style="margin:0 0 8px 0">Smart Cap – AI Powered Assistive Vision For Visually Imapaired</h3>
-              <span style="background:#fef3c7;color:#92400e;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Major Project 
-              </span>
-            </div>
-            <p class="muted" style="margin-top:8px">
-             A wearable smart cap built on Raspberry Pi 4 that assists visually impaired individuals through real-time object detection, OCR-based text reading, and LiDAR-supported navigation with a 180° environmental view. It features facial recognition and an SOS alert system that shares the user’s live location during emergencies. The entire system is controlled by Sanjay AI Assistant, which manages all functions and performs general-purpose tasks such as setting reminders, saving notes, checking weather, and playing music, enabling independent and safe mobility.
-            </p>
-            <div style="margin-top:8px;font-size:12px" class="muted-sm">
-              🏆 State-level Smart Hackathon winner & Best Technical Project Presentation Award
-            </div>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Raspberry Pi</span><span class="tech-pill">OpenCV</span>
-              <span class="tech-pill">Deep Learning</span><span class="tech-pill">IoT</span>
-              <span class="tech-pill">OCR</span><span class="tech-pill">LiDAR</span>
-              <span class="tech-pill">LLM</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="#" target="_blank" class="repo-link">Repo →</a>
-              <span class="muted-sm">Smart Cap</span>
-            </div>
-          </div>
-
-          <!-- QWACH – Malicious QR & URL Detection -->
-          <div class="project-card">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <h3 style="margin:0 0 8px 0">QWACH – Chrome Extension for Malicious QR & URL Detection using online learning</h3>
-              <span style="background:#fee2e2;color:#b91c1c;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Minor Project
-              </span>
-            </div>
-            <p class="muted" style="margin-top:8px">
-             Hybrid ensemble model to classify URLs, QR codes, and web links as malicious or legitimate, using multiple ML base models with an MLP meta-classifier for high accuracy and robustness. The system is integrated into a Chrome extension (Manifest V3) with a Flask backend for real-time threat scanning, QR code analysis, and instant visual warnings to users. It analyzes key address, domain, and HTML/JS-based features to detect phishing, suspicious redirects, and harmful scripts, and supports periodic retraining with new threat data. 
-            </p>
-            <div style="margin-top:8px;font-size:12px" class="muted-sm">
-              📄 2 research papers based on this work.
-            </div>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">Flask</span>
-              <span class="tech-pill">Chrome Extension</span><span class="tech-pill">OpenCV</span>
-              <span class="tech-pill">Machine Learning</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/QWACH-Detecting-Malicious-QR-code-URL-using-AI" target="_blank" class="repo-link">Repo →</a>
-              <span class="muted-sm">Security Tool</span>
-            </div>
-          </div>
-
-          <!-- DIP Web Based Software -->
-          <div class="project-card">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <h3 style="margin:0 0 8px 0">DIP Web Based Software</h3>
-              <span style="background:#eff6ff;color:#1d4ed8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Web Tool
-              </span>
-            </div>
-            <p class="muted" style="margin-top:8px">
-              Web-based Digital Image Processing (DIP) platform capable of performing a wide range of image manipulation tasks including filtering, edge detection, thresholding, segmentation, and morphological operations, all in real time through an interactive interface. It generate Python code, helping users learn and understand underlying DIP implementations. It also includes an AI-powered chatbot that explains DIP concepts, algorithms, and usage guidance using natural language interaction. The application is built with Streamlit for web deployment and additionally packaged as a standalone desktop .exe for offline execution without requiring Python installation, making it suitable for both educational and practical use.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">OpenCV</span>
-              <span class="tech-pill">Streamlit</span><span class="tech-pill">Ollama</span>
-              <span class="tech-pill">Gemini</span><span class="tech-pill">Image Processing</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/DIP_WEB_BASED_S-W" target="_blank" class="repo-link">Repo →</a>
-              <span class="muted-sm">Web + Desktop App</span>
-            </div>
-          </div>
-
-          <!-- Crop Recommendation System -->
-          <div class="project-card">
-            <h3 style="margin-bottom:8px">Crop Recommendation System</h3>
-            <span style="background:#eff6ff;color:#1d4ed8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Advisory Tool
-              </span>
-            <p class="muted">
-              Crop recommendation engine that suggests optimal crops based on soil nutrients (N, P, K),
-              temperature, humidity, pH and rainfall using historical agricultural data and yield patterns.
-            </p>
-            <div style="margin-top:8px;font-size:12px" class="muted-sm">
-              📄 1 research paper on this system by integrating with LLM.
-            </div>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">Machine Learning</span>
-              <span class="tech-pill">Streamlit</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/crop_recommendation_system" target="_blank">Repo →</a>
-              <span class="muted-sm">AgriTech</span>
-            </div>
-          </div>
-
-          <!-- YouTube Chatbot (ASK-THE-VIDEO) -->
-          <div class="project-card">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <h3 style="margin:0 0 8px 0">YouTube Chatbot – ASK-THE-VIDEO</h3>
-              <span style="background:#ecfdf5;color:#065f46;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Chatbot
-              </span>
-            </div>
-            <p class="muted" style="margin-top:8px">
-              Streamlit app that accepts a YouTube URL, extracts the transcript, builds semantic embeddings and
-              uses FAISS-based retrieval with Gemini 1.5 Flash to answer questions about the video.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">LangChain</span>
-              <span class="tech-pill">Gemini</span><span class="tech-pill">FAISS</span>
-              <span class="tech-pill">Streamlit</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/youtube_chatbot" target="_blank" class="repo-link">Repo →</a>
-              <span class="muted-sm">YouTube Q&A</span>
-            </div>
-          </div>
-
-          <!-- Language Translator -->
-          <div class="project-card">
-            <h3 style="margin-bottom:8px">Language Translator</h3>
-            <span style="background:#ecfdf5;color:#065f46;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Translator
-              </span>
-            <p class="muted">
-              Multi-language translator powered by LangChain and Gemini. Supports bidirectional translation
-              between Hindi, English, Punjabi, Tamil, Urdu, Marathi and more via a simple Streamlit interface.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">LangChain</span>
-              <span class="tech-pill">Gemini</span><span class="tech-pill">Streamlit</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/Language_translator_chatbot" target="_blank">Repo →</a>
-              <span class="muted-sm">Translation Tool</span>
-            </div>
-          </div>
-
-          <!-- Question Answering System -->
-          <div class="project-card">
-            <h3 style="margin-bottom:8px">Question Answering System</h3>
-            <span style="background:#ecfdf5;color:#065f46;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Q&A
-              </span>
-            <p class="muted">
-              RNN-based deep learning model for contextual QA, trained on a small domain-specific dataset to give
-              natural language answers through an interactive Streamlit interface.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">Deep Learning</span>
-              <span class="tech-pill">Streamlit</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/Question_answering_system" target="_blank">Repo →</a>
-              <span class="muted-sm">QA App</span>
-            </div>
-          </div>
-
-          <!-- Biomedical Named Entity Recognition -->
-          <div class="project-card">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start">
-              <h3 style="margin:0 0 8px 0">Biomedical Named Entity Recognition</h3>
-              <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Research Project
-              </span>
-            </div>
-            <p class="muted" style="margin-top:8px">
-              Internship research project on biomedical NER using BlueBERT, SciBERT and SpaCy for extracting
-              entities like diseases and chemicals from biomedical text. Deployed a Streamlit app with
-              color-coded entity highlighting.
-            </p>
-            <div style="margin-top:8px;font-size:12px" class="muted-sm">
-              📄 Research paper based on this work.
-            </div>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">SpaCy</span>
-              <span class="tech-pill">BERT</span><span class="tech-pill">Streamlit</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/NER-in-Bio-Medical" target="_blank">Repo →</a>
-              <span class="muted-sm">Internship Work</span>
-            </div>
-          </div>
-
-          <!-- Car Price Predictor -->
-          <div class="project-card">
-            <h3 style="margin-bottom:8px">Car Price Predictor</h3>
-            <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Predictor
-              </span>
-            <p class="muted">
-              Regression-based model to predict car prices using features like year, mileage, fuel type and
-              transmission. Deployed as an interactive Streamlit app for quick price estimation.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">Machine Learning</span>
-              <span class="tech-pill">Streamlit</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/car_price_pridiction" target="_blank">View Repo</a>
-              <span class="muted-sm">Price Prediction</span>
-            </div>
-          </div>
-
-          <!-- House Price Predictor -->
-          <div class="project-card">
-            <h3 style="margin-bottom:8px">House Price Predictor</h3>
-            <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Predictor
-              </span>
-            <p class="muted">
-              Regression model to estimate house prices based on location, built-up area and BHK details,
-              exposed via a clean Streamlit interface for instant predictions.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">Machine Learning</span>
-              <span class="tech-pill">Streamlit</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/house_price_prediction" target="_blank">View Repo</a>
-              <span class="muted-sm">Price Prediction</span>
-            </div>
-          </div>
-
-          <!-- Diffie-Hellman Key Exchange Visualizer -->
-          <div class="project-card">
-            <h3 style="margin-bottom:8px">Diffie–Hellman Key Exchange Visualizer</h3>
-            <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Security
-              </span>
-            <p class="muted">
-              Streamlit-based interactive demo of the Diffie–Hellman key exchange algorithm, showing prime and
-              primitive root selection, private/public key generation and shared secret computation step by step.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">Python</span><span class="tech-pill">Streamlit</span>
-              <span class="tech-pill">Cryptography</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/diffie-hellman-key_exchange_algo" target="_blank">Repo →</a>
-              <span class="muted-sm">Crypto Demo</span>
-            </div>
-          </div>
-
-          <!-- Airline System Database Design -->
-          <div class="project-card">
-            <h3 style="margin-bottom:8px">Design of Airline System Database</h3>
-            <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px">
-                Database
-              </span>
-            <p class="muted">
-              Comprehensive airline DBMS design with EER model and normalized relational schema for passengers,
-              flights, bookings, payments, airlines, crew and airports, enforcing real-world constraints like
-              unique passport and email per passenger.
-            </p>
-            <div style="margin-top:10px">
-              <span class="tech-pill">SQL</span><span class="tech-pill">MySQL</span>
-              <span class="tech-pill">DBMS</span>
-            </div>
-            <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
-              <a href="https://github.com/MANISHKUMAR1234567890/Design-of-Airline-System-Database" target="_blank">Repo</a>
-              <span class="muted-sm">Database Design</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- SKILLS -->
-   <section id="skills" class="section-padding" style="background:linear-gradient(180deg,#ffffff,#f8fafc)">
+   <!-- ABOUT -->
+<section id="about" class="section-padding" style="background:#ffffff">
   <div class="container">
-    <h2 style="text-align:center;font-size:28px;margin-bottom:16px">Technical Skills</h2>
+    <div class="card" style="max-width:960px;margin:0 auto;padding:28px;border-radius:14px;border:1px solid #e5e7eb;box-shadow:0 10px 24px rgba(0,0,0,0.06);transition:all .3s;">
+      <h2 style="font-size:28px;margin-bottom:12px;font-weight:800;color:#1e293b;">About Me</h2>
 
-    <div class="skills-grid">
+      <p class="muted" style="font-size:15px;line-height:1.6;color:#374151;">
+        I am an enthusiastic undergraduate specializing in Artificial Intelligence & Machine Learning, with strong hands-on experience in deep learning, natural language processing, and computer vision. 
+        Skilled in Python development and ML model deployment, I enjoy building intelligent, user-centric systems and actively explore modern deep learning architectures and application-level AI solutions.
+      </p>
 
-  
-      <!-- Programming Languages -->
-      <div class="skill-card">
-        <div style="width:96px;height:96px;margin:0 auto;margin-bottom:8px">
-          <svg viewBox="0 0 100 100" width="96" height="96">
-            <circle cx="50" cy="50" r="42" stroke="#e5e7eb" stroke-width="12" fill="none"></circle>
-            <circle cx="50" cy="50" r="42" stroke="#b98610ff" stroke-width="12" fill="none" stroke-dasharray="263" stroke-dashoffset="5" transform="rotate(-90 50 50)"></circle>
-          </svg>
-        </div>
-        <h3 style="margin-top:6px">Programming Languages</h3>
-        <p class="muted">Python, SQL, C, C++, R, HTML, CSS</p>
+      <ul style="margin-top:14px;margin-left:18px;color:#111827;line-height:1.65;font-size:15px;">
+        <li>GATE 2025 (DA) <strong>Qualified</strong></li>
+        <li><strong>Author of 6 Research Papers</strong> (Published / Under Publications / Communicated)</li>
+        <li><strong>Filed 1 Patent</strong> (Assistive Smart Cap for Visually Impaired)</li>
+        <li><strong>Two-time Finalist</strong> & <strong>Winner</strong> of 2nd edition State-Level Smart Hackathon</li>
+        <li>Received <strong>Best Project Presentation Award</strong></li>
+        <li><strong>Academic Excellence</strong> recognition for strong performance</li>
+        <li><strong>Ex-NSS Volunteer</strong> contributing to social initiatives</li>
+        <li>Foundational knowledge of <strong>Retailing & Marketing</strong></li>
+      </ul>
+
+      <!-- Tags -->
+      <div class="about-badges" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;">
+        <span class="badge-item" style="background:#eef2ff;padding:8px 14px;border-radius:12px;font-weight:700;color:#4338ca;transition:.25s;">GATE Qualified</span>
+        <span class="badge-item" style="background:#f0f9ff;padding:8px 14px;border-radius:12px;font-weight:700;color:#0369a1;transition:.25s;">Research Author</span>
+        <span class="badge-item" style="background:#fff7ed;padding:8px 14px;border-radius:12px;font-weight:700;color:#c2410c;transition:.25s;">Patent Filed</span>
+        <span class="badge-item" style="background:#ecfdf5;padding:8px 14px;border-radius:12px;font-weight:700;color:#047857;transition:.25s;">Hackathon Winner</span>
+        <span class="badge-item" style="background:#faf5ff;padding:8px 14px;border-radius:12px;font-weight:700;color:#7e22ce;transition:.25s;">Best Project Award</span>
+        <span class="badge-item" style="background:#eff6ff;padding:8px 14px;border-radius:12px;font-weight:700;color:#1d4ed8;transition:.25s;">Academic Excellence</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .badge-item:hover {
+    transform:translateY(-4px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.12);
+    cursor:pointer;
+  }
+</style>
+
+<!-- EDUCATION -->
+<section id="education" class="section-padding" style="background:linear-gradient(180deg,#f9fafb,#ffffff);padding:60px 0;">
+  <div class="container" style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:24px;">
+    <h2 style="font-size:28px;font-weight:800;color:#1e293b;">Education</h2>
+    <p style="color:#64748b;font-size:14px;">Academic background and key highlights</p>
+  </div>
+
+  <div class="container grid-2" style="max-width:1100px;margin:0 auto;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+
+    <!-- B.Tech -->
+    <div class="card edu-card" style="padding:18px 20px;border-radius:14px;border:1px solid #e5e7eb;transition:all .25s;">
+      <h3 style="color:var(--indigo);margin-bottom:4px;font-size:18px;">B.Tech in CSE (AI & ML)</h3>
+      <div style="font-weight:700;">Jawaharlal Nehru Govt. Engineering College, Sundernagar, HP</div>
+      <div class="muted" style="margin-top:4px;font-size:14px;">2022 – 2026</div>
+
+      <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;">
+        <span style="background:#eef2ff;color:#3730a3;padding:4px 10px;border-radius:999px;font-weight:700;">CGPA: 8.67 / 10</span>
+        <span style="background:#ecfdf5;color:#047857;padding:4px 10px;border-radius:999px;font-weight:700;">AI & ML Specialization</span>
       </div>
 
-      <!-- Frameworks -->
-      <div class="skill-card">
-        <div style="width:96px;height:96px;margin:0 auto;margin-bottom:8px">
-          <svg viewBox="0 0 100 100" width="96" height="96">
-            <circle cx="50" cy="50" r="42" stroke="#e5e7eb" stroke-width="12" fill="none"></circle>
-            <circle cx="50" cy="50" r="42" stroke="#10b981" stroke-width="12" fill="none" stroke-dasharray="263" stroke-dashoffset="5" transform="rotate(-90 50 50)"></circle>
-          </svg>
-        </div>
-        <h3 style="margin-top:6px">Frameworks & Libraries</h3>
-        <p class="muted">Streamlit, OpenCV, SpaCy, Flask, LangChain, scikit-learn, PyTorch, Tensorflow</p>
+      <ul style="margin-top:10px;margin-left:18px;font-size:14px;line-height:1.6;color:#374151;text-align:left;">
+        <li><strong>Deep Learning, Computer Vision, LLMs,</strong> and Data Analysis</li>
+        <li>GATE 2025 (DA) <strong>Qualified</strong> & Coordinator, <strong>GATE Wing – CSE Club</strong></li>
+        <li><strong>Research experience</strong> with multiple published & under-review papers</li>
+        <li><strong>State-Level Hackathon winner</strong></li>
+        <li>Received <strong>Best Technical Project Presentation Award</strong></li>
+      </ul>
+    </div>
+
+    <!-- Higher Secondary -->
+    <div class="card edu-card" style="padding:18px 20px;border-radius:14px;border:1px solid #e5e7eb;transition:all .25s;">
+      <h3 style="color:var(--cyan);margin-bottom:4px;font-size:18px;">Higher Secondary Education</h3>
+      <div style="font-weight:700;">Govt. Sr. Sec. School, Patta, Hamirpur, HP</div>
+      <div class="muted" style="margin-top:4px;font-size:14px;">2022</div>
+
+      <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;">
+        <span style="background:#fef3c7;color:#b45309;padding:4px 10px;border-radius:999px;font-weight:700;">93.2%</span>
+        <span style="background:#e0f2fe;color:#075985;padding:4px 10px;border-radius:999px;font-weight:700;">PCM Stream</span>
       </div>
 
-      <!-- Databases & Tools -->
-      <div class="skill-card">
-        <div style="width:96px;height:96px;margin:0 auto;margin-bottom:8px">
-          <svg viewBox="0 0 100 100" width="96" height="96">
-            <circle cx="50" cy="50" r="42" stroke="#e5e7eb" stroke-width="12" fill="none"></circle>
-            <circle cx="50" cy="50" r="42" stroke="#1310b9ff" stroke-width="12" fill="none" stroke-dasharray="263" stroke-dashoffset="5" transform="rotate(-90 50 50)"></circle>
-          </svg>
-        </div>
-        <h3 style="margin-top:6px">Databases & Tools</h3>
-        <p class="muted">MySQL, Oracle, PostgreSQL, FAISS, Postman, LaTeX, Git</p>
+      <ul style="margin-top:10px;margin-left:18px;font-size:14px;line-height:1.6;color:#374151;text-align:left;">
+        <li>Strong foundation in <strong>Mathematics and Science</strong></li>
+        <li>Active <strong>NSS Volunteer</strong></li>
+      </ul>
+    </div>
+
+    <!-- Matriculation -->
+    <div class="card edu-card" style="padding:18px 20px;border-radius:14px;border:1px solid #e5e7eb;transition:all .25s;">
+      <h3 style="color:var(--cyan);margin-bottom:4px;font-size:18px;">Matriculation</h3>
+      <div style="font-weight:700;">Govt. Sr. Sec. School, Patta, Hamirpur, HP</div>
+      <div class="muted" style="margin-top:4px;font-size:14px;">2020</div>
+
+      <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;">
+        <span style="background:#fef3c7;color:#b45309;padding:4px 10px;border-radius:999px;font-weight:700;">90.4%</span>
+        <span style="background:#ecfdf5;color:#047857;padding:4px 10px;border-radius:999px;font-weight:700;">School Topper</span>
       </div>
 
-      <!-- Soft Skills -->
-      <div class="skill-card">
-        <div style="width:96px;height:96px;margin:0 auto;margin-bottom:8px">
-          <svg viewBox="0 0 100 100" width="96" height="96">
-            <circle cx="50" cy="50" r="42" stroke="#e5e7eb" stroke-width="12" fill="none"></circle>
-            <circle cx="50" cy="50" r="42" stroke="#66d7b1ff" stroke-width="12" fill="none" stroke-dasharray="263" stroke-dashoffset="5" transform="rotate(-90 50 50)"></circle>
-          </svg>
+      <ul style="margin-top:10px;margin-left:18px;font-size:14px;line-height:1.6;color:#374151;text-align:left;">
+        <li><strong>Topper</strong> of school in board examinations</li>
+        <li>Represented school at <strong>District-Level Quiz Competition</strong></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .edu-card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 16px 32px rgba(15,23,42,0.18);
+    border-color:#c7d2fe;
+    cursor:pointer;
+  }
+</style>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-padding" style="background:#ffffff;padding:60px 0;">
+  <div class="container">
+    <h2 style="text-align:center;font-size:28px;margin-bottom:8px">Featured Projects</h2>
+   
+
+    <!-- ADVANCED LEVEL -->
+    <h3 style="font-size:20px;margin:24px auto 12px;max-width:1200px;color:#111827;">🚀 Advanced Level Projects</h3>
+    <div class="projects-grid" style="max-width:1200px;margin:0 auto 12px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+
+      <!-- Smart Cap – Major Project -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Smart Cap – AI-Powered Assistive Vision for Visually Impaired</h3>
+          <span style="background:#fef3c7;color:#92400e;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Major Project
+          </span>
         </div>
-        <h3 style="margin-top:6px">Soft Skills</h3>
-        <p class="muted">Team Collaboration, Leadership, Quick Learner, Problem-Solving</p>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Wearable smart cap on Raspberry Pi 4 that provides real-time object detection, OCR-based text reading,
+          LiDAR-assisted navigation and 180° environment awareness. Includes facial recognition, SOS with live
+          location sharing, and “Sanjay” AI voice assistant for tasks like reminders, notes, weather and media control.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Raspberry Pi</span><span class="tech-pill">OpenCV</span>
+          <span class="tech-pill">Deep Learning</span><span class="tech-pill">IoT</span>
+          <span class="tech-pill">OCR</span><span class="tech-pill">LiDAR</span>
+          <span class="tech-pill">LLM</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>State-Level Smart Hackathon <strong>winner</strong></li>
+          <li><strong>Best Technical Project Presentation</strong> award</li>
+           <li><strong>Filed for </strong>Patent</li>
+
+          
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="#" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Assistive AI • Sanjay • Smart Cap</span>
+        </div>
+      </div>
+
+      <!-- QWACH – Malicious QR & URL Detection -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">QWACH – Detecting Malicious QR codes and URLs using AI</h3>
+          <span style="background:#fee2e2;color:#b91c1c;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Minor Project
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Hybrid ensemble model that classifies URLs and QR codes as malicious or legitimate using multiple ML base
+          models with an MLP meta-classifier. Integrated into a Manifest V3 Chrome extension with Flask backend for
+          real-time threat scanning, QR analysis and instant warnings, supporting periodic online retraining.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">Flask</span>
+          <span class="tech-pill">Chrome Extension</span>
+          <span class="tech-pill">Machine Learning</span>
+          <span class="tech-pill">Ensemble Models</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li><strong>2 research papers</strong> based on this work</li>
+          <li>Supports incremental learning with new threat data</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/QWACH-Detecting-Malicious-QR-code-URL-using-AI" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Security • Chrome Extension</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INTERMEDIATE LEVEL -->
+    <h3 style="font-size:20px;margin:28px auto 12px;max-width:1200px;color:#111827;">🧩 Intermediate Level Projects</h3>
+    <div class="projects-grid" style="max-width:1200px;margin:0 auto 12px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+
+      <!-- DIP Web Based Software -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">DIP Web-Based Software</h3>
+          <span style="background:#eff6ff;color:#1d4ed8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Web Tool
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Interactive Digital Image Processing platform supporting filtering, edge detection, thresholding,
+          segmentation and morphology in real time. Generates Python code for operations and includes an AI chatbot
+          to explain DIP concepts and algorithms.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">OpenCV</span>
+          <span class="tech-pill">Streamlit</span><span class="tech-pill">Ollama</span>
+          <span class="tech-pill">Gemini</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>Web app + packaged as standalone <strong>.exe</strong> for offline use</li>
+          <li>Educational tool to learn DIP with auto-generated code</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/DIP_WEB_BASED_S-W" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Image Processing • Web + Desktop</span>
+        </div>
+      </div>
+
+      <!-- Crop Recommendation System -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Crop Recommendation System</h3>
+          <span style="background:#eff6ff;color:#1d4ed8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Advisory Tool
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          ML-based system that recommends optimal crops based on soil nutrients (N, P, K), temperature, humidity,
+          pH and rainfall using historical agricultural and yield data.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">Machine Learning</span>
+          <span class="tech-pill">Streamlit</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li><strong>1 research paper</strong> integrating this system with LLM-based advisory</li>
+          <li>Supports sustainable and data-driven agriculture decisions</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/crop_recommendation_system" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">AgriTech • Recommender</span>
+        </div>
+      </div>
+
+      <!-- Biomedical Named Entity Recognition -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Biomedical Named Entity Recognition</h3>
+          <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Research Project
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Internship project on biomedical NER using BlueBERT, SciBERT and SpaCy to extract entities like diseases
+          and chemicals from biomedical text. Deployed as a Streamlit app with color-coded entity highlighting.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">SpaCy</span>
+          <span class="tech-pill">BERT</span><span class="tech-pill">Streamlit</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li><strong>Published research paper</strong> describing methodology and results</li>
+          <li>Real-time biomedical NER tool for chemical & disease entities</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/NER-in-Bio-Medical" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">NLP • Internship Work</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BEGINNER LEVEL -->
+    <h3 style="font-size:20px;margin:28px auto 12px;max-width:1200px;color:#111827;">🌱 Beginner Level Projects</h3>
+    <div class="projects-grid" style="max-width:1200px;margin:0 auto;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
+
+      <!-- YouTube Chatbot – ASK-THE-VIDEO -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">YouTube Chatbot – ASK-THE-VIDEO</h3>
+          <span style="background:#ecfdf5;color:#065f46;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Chatbot
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Streamlit app that takes a YouTube URL, extracts the transcript, builds embeddings and uses FAISS retrieval
+          with Gemini 1.5 Flash to answer questions about the video content.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">LangChain</span>
+          <span class="tech-pill">Gemini</span><span class="tech-pill">FAISS</span>
+          <span class="tech-pill">Streamlit</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>Query any long YouTube video with conversational Q&A</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/youtube_chatbot" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">YouTube Q&A</span>
+        </div>
+      </div>
+
+      <!-- Language Translator -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Language Translator</h3>
+          <span style="background:#ecfdf5;color:#065f46;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Translator
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Multi-language translator built with LangChain and Gemini, supporting bidirectional translation between
+          Hindi, English, Punjabi, Tamil, Urdu, Marathi and more via a simple Streamlit UI.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">LangChain</span>
+          <span class="tech-pill">Gemini</span><span class="tech-pill">Streamlit</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>Supports multiple Indian languages in one interface</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/Language_translator_chatbot" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Translation Tool</span>
+        </div>
+      </div>
+
+      <!-- Question Answering System -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Question Answering System</h3>
+          <span style="background:#ecfdf5;color:#065f46;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Q&A
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          RNN-based QA model trained on a small domain dataset to generate natural language answers through a Streamlit
+          chat-like interface.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">Deep Learning</span>
+          <span class="tech-pill">RNN</span><span class="tech-pill">Streamlit</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>Hands-on exploration of sequence models for QA</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/Question_answering_system" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">QA App</span>
+        </div>
+      </div>
+
+      <!-- Car Price Predictor -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Car Price Predictor</h3>
+          <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Predictor
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Regression model to predict car prices using features like year, mileage, fuel type and transmission,
+          deployed as a Streamlit app for quick estimation.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">Machine Learning</span>
+          <span class="tech-pill">Streamlit</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>End-to-end ML workflow from preprocessing to deployment</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/car_price_pridiction" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Price Prediction</span>
+        </div>
+      </div>
+
+      <!-- House Price Predictor -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">House Price Predictor</h3>
+          <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Predictor
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Regression model to estimate house prices based on location, built-up area and BHK details with an
+          interactive Streamlit UI.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">Machine Learning</span>
+          <span class="tech-pill">Streamlit</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>Practice project for regression & feature engineering</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/house_price_prediction" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Price Prediction</span>
+        </div>
+      </div>
+
+      <!-- Diffie–Hellman Key Exchange Visualizer -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Diffie–Hellman Key Exchange Visualizer</h3>
+          <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Security
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Streamlit-based interactive demo of the Diffie–Hellman key exchange algorithm, showing each step from
+          prime number selection to shared secret computation.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">Python</span><span class="tech-pill">Streamlit</span>
+          <span class="tech-pill">Cryptography</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>Makes public-key cryptography concepts visual and intuitive</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/diffie-hellman-key_exchange_algo" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Crypto Demo</span>
+        </div>
+      </div>
+
+      <!-- Airline System Database Design -->
+      <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+          <h3 style="margin:0 0 6px 0;">Design of Airline System Database</h3>
+          <span style="background:#f3e8ff;color:#6b21a8;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+            Database
+          </span>
+        </div>
+
+        <p class="muted" style="margin-top:6px;font-size:14px;">
+          Airline DBMS design with EER model and normalized schema for passengers, flights, bookings, payments,
+          airlines, crew and airports, enforcing realistic constraints like unique passport and email.
+        </p>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+        <div style="margin-top:4px;">
+          <span class="tech-pill">SQL</span><span class="tech-pill">MySQL</span>
+          <span class="tech-pill">DBMS</span>
+        </div>
+
+        <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+        <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+          <li>Captures real airline constraints and relationships</li>
+        </ul>
+
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+          <a href="https://github.com/MANISHKUMAR1234567890/Design-of-Airline-System-Database" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+          <span class="muted-sm" style="color:#6b7280;">Database Design</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .project-card:hover {
+    transform:translateY(-6px);
+    box-shadow:0 16px 32px rgba(15,23,42,0.16);
+    border-color:#c7d2fe;
+    cursor:pointer;
+  }
+  .tech-pill {
+    display:inline-block;
+    margin:2px 6px 2px 0;
+    padding:4px 10px;
+    border-radius:999px;
+    background:#f3f4f6;
+    font-size:11px;
+    font-weight:600;
+    color:#374151;
+  }
+</style>
+
+
+<style>
+  #skills {
+    background:#ffffff;
+    padding:60px 0;
+  }
+
+  #skills h2 {
+    text-align:center;
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:28px;
+    color:#1e293b;
+  }
+
+  .skills-container {
+    max-width:1050px;
+    margin:0 auto;
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+  }
+
+  .skills-sidebar {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    min-width:40px;
+  }
+
+  .skills-sidebar span {
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    letter-spacing:4px;
+    font-size:12px;
+    font-weight:800;
+    color:#64748b;
+  }
+
+  .skills-sidebar .bar {
+    width:2px;
+    height:130px;
+    border-radius:999px;
+    background:#1e293b;
+  }
+
+  .skills-panel {
+    width:100%;
+    background:#ffffff;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+    padding:28px;
+    box-shadow:0 10px 24px rgba(0,0,0,0.08);
+  }
+
+  .skills-grid {
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+
+  .skill-block {
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:14px 20px;
+    min-width:150px;
+    text-align:center;
+    background:#ffffff;
+    font-size:14px;
+    font-weight:700;
+    color:#111827;
+    transition:all .25s ease;
+  }
+
+  .skill-block:hover {
+    transform:translateY(-5px);
+    box-shadow:0 10px 24px rgba(0,0,0,0.15);
+    cursor:pointer;
+    border-color:#111827;
+  }
+
+  @media (max-width:768px) {
+    .skills-container { flex-direction:column; }
+    .skills-sidebar { flex-direction:row; }
+    .skills-sidebar span {
+      writing-mode:horizontal-tb;
+      transform:none;
+    }
+    .skills-sidebar .bar {
+      width:80px;
+      height:2px;
+    }
+  }
+</style>
+
+<section id="skills">
+  <div class="container">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skills-sidebar">
+        <span>SKILLS</span>
+        <div class="bar"></div>
+      </div>
+
+      <div class="skills-panel">
+        <div class="skills-grid">
+
+          <!-- Programming Languages -->
+          <div class="skill-block">Python</div>
+          <div class="skill-block">SQL</div>
+          <div class="skill-block">C / C++</div>
+          <div class="skill-block">R</div>
+          <div class="skill-block">HTML</div>
+          <div class="skill-block">CSS</div>
+
+          <!-- Frameworks & Libraries -->
+          <div class="skill-block">Streamlit</div>
+          <div class="skill-block">Flask</div>
+          <div class="skill-block">OpenCV</div>
+          <div class="skill-block">Scikit-learn</div>
+          <div class="skill-block">SpaCy</div>
+          <div class="skill-block">TensorFlow</div>
+          <div class="skill-block">PyTorch</div>
+          <div class="skill-block">LangChain</div>
+          <div class="skill-block">Transformer</div>
+          <div class="skill-block">GPT</div>
+
+          <!-- Databases & Tools -->
+          <div class="skill-block">MySQL</div>
+          <div class="skill-block">Oracle</div>
+          <div class="skill-block">PostgreSQL</div>
+          <div class="skill-block">FAISS</div>
+          <div class="skill-block">Postman</div>
+          <div class="skill-block">Git</div>
+          <div class="skill-block">LaTeX</div>
+          <div class="skill-block">Tableau</div>
+          <div class="skill-block">Excel</div>
+          <div class="skill-block">Canva</div>
+
+        </div>
       </div>
 
     </div>
@@ -651,104 +992,148 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
 </section>
 
 
-    <!-- EXPERIENCE / TIMELINE -->
- <section id="experience" class="section-padding" style="background:linear-gradient(180deg,#ffffff,#f8fafc)">
+
+<!-- EXPERIENCE / TIMELINE -->
+<section id="experience" class="section-padding" style="background:linear-gradient(180deg,#ffffff,#f8fafc)">
+  <div class="container" style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:40px">
+    <h2 style="font-size:32px;font-weight:800;color:#1e293b">Experience</h2>
+    <p style="color:#64748b;margin-top:6px;font-size:15px">Internships & Professional Work</p>
+  </div>
+
   <div class="container grid-2" style="max-width:1100px;margin:0 auto">
-    
+
     <!-- Research Intern - IIT Mandi -->
     <div class="card">
-      <h3 style="color:var(--indigo);margin-bottom:6px">Research Intern</h3>
-      <div style="font-weight:700">IIT Mandi</div>
-      <div class="muted" style="margin-top:6px">June 2025 – July 2025</div>
-      <p style="margin-top:8px">
-        Worked on biometric verification using forehead creases under Dr. Aditya Nigam; Applied DL models (VGG16,
-        Vision Transformer) & LoFTR for feature matching; Created custom dataset using homography-based augmentation;
-        Performance evaluation using SSIM, Cosine Similarity & EER.
-      </p>
-      <a href="assets\iit mandi internship certificate.jpg" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:13px;color:var(--indigo);font-weight:600">
-        View Certificate
-      </a>
+      <ul style="margin-left:16px; line-height:1.6">
+        <li><strong>Position:</strong> Research Intern</li>
+        <li><strong>Organization:</strong> IIT Mandi</li>
+        <li><strong>Period:</strong> June 2025 – July 2025</li>
+        <li><strong>Supervisor:</strong>Dr. Aditya Nigam</li>
+        <li><strong>Mentor:</strong> Ms. Geetanjali Sharma</li>
+        <li><strong>Work Highlights:</strong>
+          <ul style="margin-top:4px">
+            <li>Biometric verification using forehead crease patterns</li>
+            <li>Implemented VGG16 & Vision Transformer models</li>
+            <li>Applied LoFTR for feature matching</li>
+            <li>Created custom dataset using homography-based augmentation</li>
+            <li>Evaluated performance using SSIM, Cosine Similarity & EER</li>
+          </ul>
+        </li>
+      </ul>
+      <a href="assets/iit mandi internship certificate.jpg" target="_blank" style="font-size:13px;color:var(--indigo);font-weight:600">View Certificate</a>
     </div>
 
     <!-- Data Analyst - CodTech -->
     <div class="card">
-      <h3 style="color:#06b6d4;margin-bottom:6px">Data Analyst</h3>
-      <div style="font-weight:700">CodTech IT Solutions</div>
-      <div class="muted" style="margin-top:6px">Dec 2024 – Jan 2025</div>
-      <p style="margin-top:8px">
-        Built Tableau dashboards and automated workflows in Excel (formulas, validation); Queried Oracle DB using SQL
-        (DML, DDL, DCL); Worked with R for data processing & visualization.
-      </p>
-      <a href="assets\codtech internship.pdf" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:13px;color:#06b6d4;font-weight:600">
-        View Certificate
-      </a>
+      <ul style="margin-left:16px; line-height:1.6">
+        <li><strong>Position:</strong> Data Analyst</li>
+        <li><strong>Organization:</strong> CodTech IT Solutions</li>
+        <li><strong>Period:</strong> Dec. 2024 – Jan. 2025</li>
+        <li><strong>Supervisor:</strong> Training Team</li>
+        
+        <li><strong>Work Highlights:</strong>
+          <ul style="margin-top:4px">
+            <li>Developed Tableau dashboards</li>
+            <li>Automated workflows in Excel (formulas, validation)</li>
+            <li>Executed SQL queries (DML, DDL, DCL) on Oracle DB</li>
+            <li>Used R for data processing & visualization</li>
+          </ul>
+        </li>
+      </ul>
+      <a href="assets/codtech internship.pdf" target="_blank" style="font-size:13px;color:#06b6d4;font-weight:600">View Certificate</a>
     </div>
 
     <!-- Research Intern - NIT Hamirpur -->
     <div class="card">
-      <h3 style="color:#10b981;margin-bottom:6px">Research Intern</h3>
-      <div style="font-weight:700">NIT Hamirpur</div>
-      <div class="muted" style="margin-top:6px">June 2024 – July 2024</div>
-      <p style="margin-top:8px">
-        Worked on biomedical NER using SciBERT & BlueBERT under Dr. Pardeep Singh & Mr. Poonam Kashtriya;
-        Developed a Streamlit-based tool for real-time biomedical named entity extraction specifically chemical and disease entities. Authored and published a research paper describing methodology, experimentation and results of this project
-      </p>
-      <a href="assets\nit internship.pdf" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:13px;color:#10b981;font-weight:600">
-        View Certificate
-      </a>
+      <ul style="margin-left:16px; line-height:1.6">
+        <li><strong>Position:</strong> Research Intern</li>
+        <li><strong>Organization:</strong> NIT Hamirpur</li>
+        <li><strong>Period:</strong> June 2024 – July 2024</li>
+        <li><strong>Supervisor:</strong> Dr. Pardeep Singh</li>
+        <li><strong>Mentor:</strong> Mr. Poonam Kashtriya</li>
+        <li><strong>Work Highlights:</strong>
+          <ul style="margin-top:4px">
+            <li>Biomedical NER using SciBERT, BlueBERT and Spacy models</li>
+            <li>Developed Streamlit based interface for real-time entity extraction</li>
+            <li>Extracted chemical & disease entities from biomedical text</li>
+            <li>Authored & published research paper covering methodology & results</li>
+          </ul>
+        </li>
+      </ul>
+      <a href="assets/nit internship.pdf" target="_blank" style="font-size:13px;color:#10b981;font-weight:600">View Certificate</a>
     </div>
 
   </div>
 </section>
-
-
-   
 <!-- PUBLICATIONS -->
 <section id="publications" class="section-padding">
   <div class="container" style="max-width:880px;margin:0 auto">
-    <h2 style="text-align:center;font-size:28px;margin-bottom:18px">Publications & Papers</h2>
+    <h2 style="text-align:center;font-size:28px;margin-bottom:18px">Publications</h2>
 
     <div style="display:grid;gap:16px">
 
-      <!-- Paper 1 -->
+      <!-- Communicated (2025) -->
       <div class="pub-card">
-        <div style="font-size:12px;color:var(--indigo);font-weight:800;margin-bottom:6px">Research Paper • Published (2024)</div>
-        <h3 style="margin:0 0 6px 0">Enhanced Biomedical Named Entity Recognition Using SpaCy and BERT Models</h3>
-        <p class="muted">Presents NER pipeline comparing SpaCy and BERT-based transformers for improved biomedical text extraction.</p>
-        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
-          <span class="muted">Authors: Manish Kumar, Dr. Pardeep Singh, Mr. Poonam Kashtriya</span>
-          <a href="https://www.sciencedirect.com/science/article/pii/S1877050925015492" style="font-weight:700;color:var(--indigo)">View Paper →</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:12px;color:var(--indigo);font-weight:800;">
+            Research Paper • Communicated (2025)
+          </div>
+          <span style="font-size:11px;padding:2px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;">
+            2025
+          </span>
+        </div>
+        <h3 style="margin:0 0 6px 0">SmartGuard: Online-Learning Chrome Extension for QR Code and URL Safety</h3>
+        <p class="muted">
+          Introduces online learning with hybrid model in a Chrome extension for QR code and URL safety.
+        </p>
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <span class="muted">
+            Authors: Manish Kumar, Rohit Choudhary, Anmol Garg, Rohit Sharma, Meenakshi Shruti Pal
+          </span>
+          <a href="#" style="font-weight:700;color:var(--indigo)">View Status →</a>
         </div>
       </div>
 
-      <!-- Book Chapter -->
-      <div class="pub-card" style="background:linear-gradient(180deg,#ecfeff,#ffffff)">
-        <div style="font-size:12px;color:#06b6d4;font-weight:800;margin-bottom:6px">Book Chapter • Published (2025)</div>
-        <h3 style="margin:0 0 6px 0">AI for Sustainable Design and Construction</h3>
-        <p class="muted">Explores AI-driven automation and ML-based resource prediction approaches in sustainable smart infrastructure planning.</p>
-        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
-          <span class="muted">Authors: Manish Kumar, Rohit Sharma, Aditya Sharma, Ravi Kumar, Navdeep Sharma</span>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-95240-1_13" style="font-weight:700;color:#06b6d4">View Chapter →</a>
-        </div>
-      </div>
-
+      <!-- Under Publication -->
       <!-- Paper 2 -->
       <div class="pub-card">
-        <div style="font-size:12px;color:var(--indigo);font-weight:800;margin-bottom:6px">Research Paper • Under Publication (2025)</div>
-        <h3 style="margin:0 0 6px 0">Leveraging Deep Learning for Detection of Lumpy Skin Disease in Cattle: A New Era in Veterinary Healthcare</h3>
-        <p class="muted">Developed deep CNN-based classification approach improving veterinary disease detection accuracy for livestock healthcare.</p>
-        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
-          <span class="muted">Authors: Manish Kumar, Anmol Garg, Ravi Kumar</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:12px;color:var(--indigo);font-weight:800;">
+            Research Paper • Under Publication (2025)
+          </div>
+          <span style="font-size:11px;padding:2px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;">
+            2025
+          </span>
+        </div>
+        <h3 style="margin:0 0 6px 0">
+          Leveraging Deep Learning for Detection of Lumpy Skin Disease in Cattle: A New Era in Veterinary Healthcare
+        </h3>
+        <p class="muted">
+          Developed deep CNN-based classification approach improving veterinary disease detection accuracy for livestock healthcare.
+        </p>
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <span class="muted">Authors: Manish Kumar, Anmol Garg, Ravi Kumar, Amritpal Singh, Aditya Khamparia</span>
           <a href="#" style="font-weight:700;color:var(--indigo)">View Status →</a>
         </div>
       </div>
 
       <!-- Paper 3 -->
       <div class="pub-card" style="background:linear-gradient(180deg,#ecfeff,#ffffff)">
-        <div style="font-size:12px;color:#06b6d4;font-weight:800;margin-bottom:6px">Research Paper • Under Publication (2025)</div>
-        <h3 style="margin:0 0 6px 0">AI-Based Crop Recommendation with LLM-Powered Advisory for Sustainable & Climate-Resilient Agriculture</h3>
-        <p class="muted">LLM-driven decision support system recommending suitable crops based on weather, soil features & environmental factors.</p>
-        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:12px;color:#06b6d4;font-weight:800;">
+            Research Paper • Under Publication (2025)
+          </div>
+          <span style="font-size:11px;padding:2px 10px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-weight:700;">
+            2025
+          </span>
+        </div>
+        <h3 style="margin:0 0 6px 0">
+          AI-Based Crop Recommendation with LLM-Powered Advisory for Sustainable & Climate-Resilient Agriculture
+        </h3>
+        <p class="muted">
+          LLM-driven decision support system recommending suitable crops based on weather, soil features & environmental factors.
+        </p>
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
           <span class="muted">Authors: Manish Kumar, Meenakshi Shruti Pal</span>
           <a href="#" style="font-weight:700;color:#06b6d4">View Status →</a>
         </div>
@@ -756,21 +1141,68 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
 
       <!-- Paper 4 -->
       <div class="pub-card">
-        <div style="font-size:12px;color:var(--indigo);font-weight:800;margin-bottom:6px">Research Paper • Under Publication (2025)</div>
-        <h3 style="margin:0 0 6px 0">HybridStack-MLP: Advanced Ensemble Learning for Malicious QR Code & URL Detection</h3>
-        <p class="muted">Introduces multimodel ensemble architecture combining MLP with hybrid stacking for cyber threat intelligence and phishing detection.</p>
-        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
-          <span class="muted">Authors: Manish Kumar, Rohit Sharma, Sanyam Sharma, Sahil, Meenakshi Shruti Pal</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:12px;color:var(--indigo);font-weight:800;">
+            Research Paper • Under Publication (2025)
+          </div>
+          <span style="font-size:11px;padding:2px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;">
+            2025
+          </span>
+        </div>
+        <h3 style="margin:0 0 6px 0">
+          HybridStack-MLP: Advanced Ensemble Learning for Malicious QR Code & URL Detection
+        </h3>
+        <p class="muted">
+          Introduces multimodel ensemble architecture combining MLP with hybrid stacking for cyber threat intelligence and phishing detection.
+        </p>
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <span class="muted">
+            Authors: Manish Kumar, Rohit Sharma, Sanyam Sharma, Sahil, Meenakshi Shruti Pal
+          </span>
           <a href="#" style="font-weight:700;color:var(--indigo)">View Status →</a>
         </div>
       </div>
-       <div class="pub-card">
-        <div style="font-size:12px;color:var(--indigo);font-weight:800;margin-bottom:6px">Research Paper • Communicated(2025)</div>
-        <h3 style="margin:0 0 6px 0">SmartGuard: Online-Learning Chrome Extension for QR Code and URL Safety</h3>
-        <p class="muted">Introduces online learning with hybrid model in Chrome Extension.</p>
-        <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
-          <span class="muted">Authors: Manish Kumar, Rohit Choudhary, Anmol Garg, Rohit Sharma, Meenakshi Shruti Pal</span>
-          <a href="#" style="font-weight:700;color:var(--indigo)">View Status →</a>
+
+      <!-- Published -->
+      <!-- Book Chapter (2025) -->
+      <div class="pub-card" style="background:linear-gradient(180deg,#ecfeff,#ffffff)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:12px;color:#06b6d4;font-weight:800;">
+            📌 Book Chapter • Published (2025)
+          </div>
+          <span style="font-size:11px;padding:2px 10px;border-radius:999px;background:#e0f2fe;color:#0369a1;font-weight:700;">
+            2025
+          </span>
+        </div>
+        <h3 style="margin:0 0 6px 0">AI for Sustainable Design and Construction</h3>
+        <p class="muted">
+          Explores AI-driven automation and ML resource prediction in sustainable smart infrastructure planning.
+        </p>
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <span class="muted">Authors: Manish Kumar, Rohit Sharma, Aditya Sharma, Ravi Kumar, Navdeep Sharma</span>
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-95240-1_13" style="font-weight:700;color:#06b6d4">View Chapter →</a>
+        </div>
+      </div>
+
+      <!-- Published Paper 1 (2024) -->
+      <div class="pub-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:12px;color:var(--indigo);font-weight:800;">
+            📌 Research Paper • Published (2024)
+          </div>
+          <span style="font-size:11px;padding:2px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;">
+            2024
+          </span>
+        </div>
+        <h3 style="margin:0 0 6px 0">
+          Enhanced Biomedical Named Entity Recognition Using SpaCy and BERT Models
+        </h3>
+        <p class="muted">
+          Presents NER pipeline comparing SpaCy and BERT-based transformers for improved biomedical text extraction.
+        </p>
+        <div style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <span class="muted">Authors: Manish Kumar, Pardeep Singh, Poonam Kashtriya</span>
+          <a href="https://www.sciencedirect.com/science/article/pii/S1877050925015492" style="font-weight:700;color:var(--indigo)">View Paper →</a>
         </div>
       </div>
 
@@ -781,73 +1213,64 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
 
 
 
-    <!-- ACHIEVEMENTS & AWARDS -->
+<!-- ACHIEVEMENTS & AWARDS -->
 <section id="Achievement" class="section-padding" style="background:linear-gradient(180deg,#ffffff,#f9fafb)">
   <div class="container" style="max-width:1000px;margin:0 auto">
     <h2 style="text-align:center;font-size:28px;margin-bottom:18px">Achievements & Awards</h2>
 
     <div class="awards-grid" style="display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
 
-      <!-- GATE 2025 -->
-      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
+      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.25s, box-shadow 0.25s">
         <div class="award-icon" style="font-size:26px;">🎯</div>
         <div>
           <h3 style="margin:0 0 4px 0;font-size:16px;">GATE 2025 (DA) Qualified</h3>
-          <p class="muted" style="margin:0;font-size:14px;">Qualified GATE 2025 in Data Science and Artifical Intelligence (DA) in prefinal year, strengthening core foundations in AI&ML, Mathematics and data-driven problem solving.</p>
+          
         </div>
       </div>
 
-      <!-- Research paper presentations -->
-      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
+      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.25s, box-shadow 0.25s">
         <div class="award-icon" style="font-size:26px;">📑</div>
         <div>
           <h3 style="margin:0 0 4px 0;font-size:16px;">Research Paper Presentations</h3>
-          <p class="muted" style="margin:0;font-size:14px;">Presented 4 research papers in international conferences in the domains of biomedical NLP, AI for sustainability and security.</p>
+        
         </div>
       </div>
 
-      <!-- State level hackathon -->
-      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
+      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.25s, box-shadow 0.25s">
         <div class="award-icon" style="font-size:26px;">🏆</div>
         <div>
-          <h3 style="margin:0 0 4px 0;font-size:16px;">State-Level Smart Hackathon</h3>
-          <p class="muted" style="margin:0;font-size:14px;">Two-time finalist and winner in the 2<sup>nd</sup> edition of state-level Smart Hackathon for AI-driven problem-solving solutions.</p>
+          <h3 style="margin:0 0 4px 0;font-size:16px;">State-Level Smart Hackathon Winner</h3>
+         
         </div>
       </div>
 
-      <!-- Best technical project presentation -->
-      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
+      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.25s, box-shadow 0.25s">
         <div class="award-icon" style="font-size:26px;">💡</div>
         <div>
-          <h3 style="margin:0 0 4px 0;font-size:16px;">Best Technical Project Presentation</h3>
-          <p class="muted" style="margin:0;font-size:14px;">Received Best Technical Project Presentation Award for demonstrating impactful, well-communicated AI/ML solutions.</p>
+          <h3 style="margin:0 0 4px 0;font-size:16px;">Best Project Presentation Award</h3>
+        
         </div>
       </div>
 
-      <!-- Appreciation by startup cell -->
-      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
+      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.25s, box-shadow 0.25s">
         <div class="award-icon" style="font-size:26px;">🚀</div>
         <div>
-          <h3 style="margin:0 0 4px 0;font-size:16px;">Appreciation by Startup Cell</h3>
-          <p class="muted" style="margin:0;font-size:14px;">Award of Appreciation by the Startup Cell for innovation, initiative and contribution towards entrepreneurial-focused projects.</p>
+          <h3 style="margin:0 0 4px 0;font-size:16px;">Startup Cell Appreciation Award</h3>
+ 
         </div>
       </div>
-      <!-- Academic Excellence Award -->
-<div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
-  <div class="award-icon" style="font-size:26px;">🎓</div>
-  <div>
-    <h3 style="margin:0 0 4px 0;font-size:16px;">Academic Excellence Award</h3>
-    <p class="muted" style="margin:0;font-size:14px;">
-      Recognized with Academic Excellence Award for outstanding academic performance and consistent achievements.
-    </p>
-  </div>
-</div>
 
+      <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.25s, box-shadow 0.25s">
+        <div class="award-icon" style="font-size:26px;">🎓</div>
+        <div>
+          <h3 style="margin:0 0 4px 0;font-size:16px;">Academic Excellence Award</h3>
+          
+        </div>
+      </div>
 
     </div>
   </div>
 </section>
-
 
 
 <!-- CERTIFICATIONS -->
@@ -862,7 +1285,7 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
         <div style="font-size:26px;">🧠</div>
         <div>
           <h3 style="margin:0 0 4px 0;font-size:16px;">Research Application of Deep Learning</h3>
-          <p class="muted" style="margin:0 0 6px 0;font-size:14px;">Issuing Authority: NIT Hamirpur</p>
+          
           <a href="assets\deep learning workshop nit.pdf" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--indigo);">
             View Certificate →
           </a>
@@ -874,7 +1297,7 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
         <div style="font-size:26px;">🤖</div>
         <div>
           <h3 style="margin:0 0 4px 0;font-size:16px;">Deep Learning Certification</h3>
-          <p class="muted" style="margin:0 0 6px 0;font-size:14px;">Issuing Authority: NPTEL (IIT Ropar)</p>
+          
           <a href="assets\Deep_learning_nptel_certification .pdf" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--indigo);">
             View Certificate →
           </a>
@@ -886,7 +1309,7 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
         <div style="font-size:26px;">🐍</div>
         <div>
           <h3 style="margin:0 0 4px 0;font-size:16px;">Python Certification</h3>
-          <p class="muted" style="margin:0 0 6px 0;font-size:14px;">Issuing Authority: Spoken Tutorial Project, IIT Bombay</p>
+         
           <a href="assets\python certification iit bombay.pdf" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--indigo);">
             View Certificate →
           </a>
@@ -898,7 +1321,7 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
         <div style="font-size:26px;">🧾</div>
         <div>
           <h3 style="margin:0 0 4px 0;font-size:16px;">SQL Certification</h3>
-          <p class="muted" style="margin:0 0 6px 0;font-size:14px;">Issuing Authority: HackerRank</p>
+         
           <a href="assets\sql_basic certificate.pdf" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--indigo);">
             View Certificate →
           </a>
@@ -909,8 +1332,8 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
       <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
         <div style="font-size:26px;">💻</div>
         <div>
-          <h3 style="margin:0 0 4px 0;font-size:16px;">Web Designing Certificate</h3>
-          <p class="muted" style="margin:0 0 6px 0;font-size:14px;">Issuing Authority: JNGEC</p>
+          <h3 style="margin:0 0 4px 0;font-size:16px;">Web Designing Certificatation</h3>
+          
           <a href="assets\web designing workshop.pdf" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--indigo);">
             View Certificate →
           </a>
@@ -921,8 +1344,8 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
       <div class="card award-card" style="display:flex;gap:12px;align-items:flex-start;transition:transform 0.2s, box-shadow 0.2s">
         <div style="font-size:26px;">🔬</div>
         <div>
-          <h3 style="margin:0 0 4px 0;font-size:16px;">VLSI Workshop Certificate</h3>
-          <p class="muted" style="margin:0 0 6px 0;font-size:14px;">Issuing Authority: JUIT Solan</p>
+          <h3 style="margin:0 0 4px 0;font-size:16px;">VLSI Workshop Certificatation</h3>
+          
           <a href="assets\vlsi workshop.pdf" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--indigo);">
             View Certificate →
           </a>
@@ -933,7 +1356,7 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
   <div style="font-size:26px;">🛒</div>
   <div>
     <h3 style="margin:0 0 4px 0;font-size:16px;">Retail Sector Level-2 Certification</h3>
-    <p class="muted" style="margin:0 0 6px 0;font-size:14px;">Issuing Authority: RASCI — Retailers Association’s Skill Council of India (Skill India / NSDC)</p>
+   
     <a href="assets\retail course certificate.pdf" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--indigo);">
       View Certificate →
     </a>
@@ -951,7 +1374,7 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
     <section id="contact" class="section-padding">
       <div class="container contact-wrap">
         <h2 style="text-align:center;font-size:28px;margin-bottom:8px">Get In Touch</h2>
-        <p class="muted" style="text-align:center;margin-bottom:18px">Open to internships, collaborations and research opportunities. Email me or use the contact form below.</p>
+        <p class="muted" style="text-align:center;margin-bottom:18px">Open to internships, collaborations and research opportunities.</p>
 
         <form class="contact-form" action="https://formsubmit.co/manishk97253@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="New Portfolio Message">
@@ -1006,7 +1429,7 @@ Skilled in Python development, Machine Learning model deployment, and chatbot de
       </div>
 
       <div class="copyright">
-        &copy; <span id="current-year"></span> Manish Kumar🚀
+        &copy; <span id="current-year"></span> Manish Kumar
       </div>
     </div>
   </footer>
