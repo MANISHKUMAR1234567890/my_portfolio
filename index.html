@@ -584,6 +584,43 @@
             <span class="muted-sm" style="color:#6b7280;">AgriTech • Recommender</span>
           </div>
         </div>
+        <!-- PDF Chatbot – Multi-Document RAG -->
+<div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">
+    <h3 style="margin:0 0 6px 0;">Custom Document Chatbot with Memory</h3>
+    <span style="background:#ecfdf5;color:#065f46;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;white-space:nowrap;">
+      RAG Chatbot
+    </span>
+  </div>
+
+  <p class="muted" style="margin-top:6px;font-size:14px;">
+    AI-powered document chatbot that enables users to upload and interact with custom documents such as PDFs and
+    text files. The system uses Retrieval-Augmented Generation (RAG) with conversational memory to provide
+    context-aware responses along with accurate source-level information.
+  </p>
+
+  <div style="margin-top:8px;font-size:13px;font-weight:600;">Tech Stack:</div>
+  <div style="margin-top:4px;">
+    <span class="tech-pill">Python</span>
+    <span class="tech-pill">LangChain</span>
+    <span class="tech-pill">RAG</span>
+    <span class="tech-pill">FAISS</span>
+    <span class="tech-pill">Gemini</span>
+    <span class="tech-pill">Streamlit</span>
+  </div>
+
+  <div style="margin-top:8px;font-size:13px;font-weight:600;">Highlights:</div>
+  <ul style="margin:4px 0 0 18px;font-size:13px;color:#4b5563;">
+    <li>Supports <strong>multi-document upload</strong> and unified semantic search</li>
+    <li>Designed for <strong>research papers, reports, and technical documentation</strong></li>
+  </ul>
+
+  <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center;font-size:13px;">
+    <a href="https://github.com/MANISHKUMAR1234567890/PDF-RAG" target="_blank" class="repo-link" style="font-weight:600;color:#4f46e5;">Repo →</a>
+    <span class="muted-sm" style="color:#6b7280;">GenAI • Document Intelligence</span>
+  </div>
+</div>
+
 
         <!-- Biomedical Named Entity Recognition -->
         <div class="project-card" style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:16px 18px;transition:all .25s;">
@@ -987,60 +1024,165 @@
     }
   }
 </style>
+<style>
+/* ===== SKILLS GRID ===== */
+.skills-category-grid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+  gap:24px;
+}
 
-<section id="skills">
+/* ===== CATEGORY CARD ===== */
+.skill-category-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px 24px;
+  box-shadow:var(--shadow-1);
+  transition:all .25s ease;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  min-height:260px; /* 🔹 makes cards square-like */
+}
+
+.skill-category-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-2);
+}
+
+/* ===== CARD TITLE ===== */
+.skill-category-card h3{
+  margin:0 0 14px;
+  font-size:18px;
+  font-weight:800;
+  color:var(--text);
+}
+
+/* ===== SKILL TAGS ===== */
+.skill-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skill-tags span{
+  background:rgba(148,163,184,0.18);
+  color:var(--text);
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  transition:.2s;
+}
+
+.skill-tags span:hover{
+  background:rgba(99,102,241,0.25);
+  color:var(--indigo);
+  cursor:default;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+  .skills-category-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+<section id="skills" class="section-padding">
   <div class="container">
-    <h2>Technical Skills</h2>
+    <h2 style="text-align:center;font-size:28px;font-weight:800;margin-bottom:30px">
+      Technical Skills
+    </h2>
 
-    <div class="skills-container">
+    <div class="skills-category-grid">
 
-      <div class="skills-sidebar">
-        <span>SKILLS</span>
-        <div class="bar"></div>
+      <!-- AI / ML -->
+      <div class="skill-category-card">
+        <h3>🤖 AI & ML</h3>
+        <div class="skill-tags">
+          <span>TensorFlow</span>
+          <span>PyTorch</span>
+          <span>Keras</span>
+          <span>Scikit-learn</span>
+          <span>Computer Vision</span>
+          <span>LangChain</span>
+          <span>CNNs</span>
+          <span>Autoencoders</span>
+          <span>GANs</span>
+          <span>Object Detection</span>
+          <span>Transfer Learning</span>
+          <span>Transformers</span>
+          <span>LLMs</span>
+          <span>RAG</span>
+          <span>Prompt Engineering</span>
+        </div>
       </div>
 
-      <div class="skills-panel">
-        <div class="skills-grid">
+      <!-- Backend -->
+      <div class="skill-category-card">
+        <h3>⚙️ Backend Development</h3>
+        <div class="skill-tags">
+          <span>Flask</span>
+          <span>Django</span>
+          <span>API Design</span>
+          <span>Model Deployment</span>
+        </div>
+      </div>
 
-          <!-- Programming Languages -->
-          <div class="skill-block">Python</div>
-          <div class="skill-block">SQL</div>
-          <div class="skill-block">C / C++</div>
-          <div class="skill-block">R</div>
-          <div class="skill-block">HTML</div>
-          <div class="skill-block">CSS</div>
+      <!-- Programming -->
+      <div class="skill-category-card">
+        <h3>💻 Programming Languages</h3>
+        <div class="skill-tags">
+          <span>Python</span>
+          <span>C / C++</span>
+          <span>SQL</span>
+          <span>R</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+      </div>
 
-          <!-- Frameworks & Libraries -->
-          <div class="skill-block">Streamlit</div>
-          <div class="skill-block">Flask</div>
-          <div class="skill-block">OpenCV</div>
-          <div class="skill-block">Scikit-learn</div>
-          <div class="skill-block">SpaCy</div>
-          <div class="skill-block">TensorFlow</div>
-          <div class="skill-block">PyTorch</div>
-          <div class="skill-block">LangChain</div>
-          <div class="skill-block">Transformer</div>
-          <div class="skill-block">GPT</div>
-          <div class="skill-block">Numpy</div>
-          <div class="skill-block">Pandas</div>
-          <div class="skill-block">Matplotlib</div>
-          <div class="skill-block">RAG</div>
+      <!-- Databases -->
+      <div class="skill-category-card">
+        <h3>🗄️ Databases</h3>
+        <div class="skill-tags">
+          <span>MySQL</span>
+          <span>PostgreSQL</span>
+          <span>SQLite</span>
+          <span>Oracle</span>
+          <span>FAISS</span>
+        </div>
+      </div>
 
-          <!-- Databases & Tools -->
-          <div class="skill-block">MySQL</div>
-          <div class="skill-block">Oracle</div>
-          <div class="skill-block">PostgreSQL</div>
-          <div class="skill-block">SQLite</div>
-          <div class="skill-block">FAISS</div>
-          <div class="skill-block">Postman</div>
-          <div class="skill-block">Git</div>
-          <div class="skill-block">Linux</div>
-          <div class="skill-block">Google Colab</div>
-          <div class="skill-block">LaTeX</div>
-          <div class="skill-block">Tableau</div>
-          <div class="skill-block">Excel</div>
-          <div class="skill-block">Canva</div>
+      <!-- Core CS -->
+      <div class="skill-category-card">
+        <h3>📚 Core CS Fundamentals</h3>
+        <div class="skill-tags">
+          <span>Data Structures & Algorithms</span>
+          <span>OOPs</span>
+          <span>Operating Systems</span>
+          <span>Computer Networks</span>
+          <span>DBMS</span>
+        </div>
+      </div>
 
+      <!-- Others -->
+      <div class="skill-category-card">
+        <h3>🛠️ Tools & Platforms</h3>
+        <div class="skill-tags">
+          <span>Git / GitHub</span>
+          <span>Linux</span>
+          <span>Postman</span>
+          <span>Google Colab</span>
+          <span>Tableau</span>
+          <span>Excel</span>
+          <span>LaTeX</span>
+          <span>Canva</span>
+          <span>Digital Marketing</span>
         </div>
       </div>
 
